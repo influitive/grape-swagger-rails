@@ -25,6 +25,7 @@
         // For now, we are hiding the form items because they are wrong and confusing
         //   We are planning on fixing the grape swagger gem
         $("td").filter(function() {return $(this).text() == "form";}).text("");
+        $("td, td > span").filter(function() {return $(this).text() == "File";}).text("json");
       },
       onFailure: function(data) {
         if('console' in window) {
