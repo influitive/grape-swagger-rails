@@ -21,6 +21,10 @@
           console.log(swaggerUi);
         }
         $('pre code').each(function(i, e) {hljs.highlightBlock(e)});
+
+        // For now, we are hiding the form items because they are wrong and confusing
+        //   We are planning on fixing the grape swagger gem
+        $("td").filter(function() {return $(this).text() == "form";}).text("");
       },
       onFailure: function(data) {
         if('console' in window) {
